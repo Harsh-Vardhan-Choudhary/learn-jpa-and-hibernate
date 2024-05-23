@@ -31,6 +31,19 @@ public class Course {
         return Author;
     }
 
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAuthor(String author) {
+        Author = author;
+    }
+
     @Override
     public String toString() {
         return "Course [id=" + id + ", name=" + name + ", Author=" + Author + "]";

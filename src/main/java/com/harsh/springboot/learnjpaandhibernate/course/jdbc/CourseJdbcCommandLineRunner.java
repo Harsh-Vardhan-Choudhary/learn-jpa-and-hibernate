@@ -8,8 +8,7 @@ import com.harsh.springboot.learnjpaandhibernate.course.Course;
 
 @Component
 public class CourseJdbcCommandLineRunner implements CommandLineRunner {
-
-
+    
     @Autowired
     private CourseJdbcRepository repository;
 
@@ -20,6 +19,9 @@ public class CourseJdbcCommandLineRunner implements CommandLineRunner {
         repository.insert(new Course(3, "Learn Docker", "Harsh"));
 
         repository.deleteByID(1);
+
+        System.out.println(repository.selectByID(2));
+        System.out.println(repository.selectByID(3));
 
     }
 }
