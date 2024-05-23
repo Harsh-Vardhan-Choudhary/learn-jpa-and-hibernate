@@ -1,8 +1,19 @@
 package com.harsh.springboot.learnjpaandhibernate.course;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity (name = "Course")       //used when the table name and the class name differs
 public class Course {
+
+    @Id
     private long id;
+
+    @Column (name = "name")     //similar to the above case
     private String name;
+
+    @Column
     private String Author;
 
     //constructor
